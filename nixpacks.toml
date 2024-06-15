@@ -1,2 +1,2 @@
 [phases.build]
-cmds = ['chown -R www-data:www-data /app/']
+cmds = ['usermod -u 0 www-data', 'groupmod -g 0 www-data', 'chown -R www-data:www-data /app/']
