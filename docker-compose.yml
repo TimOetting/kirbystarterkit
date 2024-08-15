@@ -11,7 +11,7 @@ services:
       # - ./site:/var/www/localhost/htdocs/site
       # - ./assets:/var/www/localhost/htdocs/assets
     ports:
-      - "3000:80"
+      - "3032:80"
     build:
       context: ./
     # volumes:
