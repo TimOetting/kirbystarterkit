@@ -9,7 +9,7 @@ services:
       # - ./assets:/var/www/localhost/htdocs/assets
       - ./media:/var/www/localhost/htdocs/media:rw
     ports:
-      - "80:80"
+      - "3000:80"
     build:
       context: ./
     # volumes:
