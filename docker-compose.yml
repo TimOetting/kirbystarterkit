@@ -1,0 +1,21 @@
+version: "3"
+services:
+  docker:
+    # image: paolomolo/getkirby-apache:v3
+    volumes:
+      - ./content:/var/www/localhost/htdocs/content:rw
+      # - ./site:/var/www/localhost/htdocs/site
+      - ./site/accounts:/var/www/localhost/htdocs/site/accounts:rw
+      # - ./assets:/var/www/localhost/htdocs/assets
+      - ./media:/var/www/localhost/htdocs/media:rw
+    ports:
+      - "80:80"
+    build:
+      context: ./
+    # volumes:
+    #   - ../cms:/var/www/html/cms:rw
+    #   - ./data/cms/content:/var/www/html/cms/content:rw
+    #   - ./data/cms/accounts:/var/www/html/cms/site/accounts:rw
+    environment:
+      KIRBY_UID: "1000" # find out your own value with 'id -u'
+      KIRBY_GID: "1000" # find out your own value with 'id -g'
