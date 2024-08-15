@@ -3,11 +3,14 @@ services:
   docker:
     # image: paolomolo/getkirby-apache:v3
     volumes:
-      - ./content:/var/www/localhost/htdocs/content:rw
+      - ./content:/var/www/html/content:rw
+      - ./site/accounts:/var/www/html/site/accounts:rw
+      - ./media:/var/www/html/media:rw
+      # - ./content:/var/www/localhost/htdocs/content:rw
+      # - ./site/accounts:/var/www/localhost/htdocs/site/accounts:rw
+      # - ./media:/var/www/localhost/htdocs/media:rw
       # - ./site:/var/www/localhost/htdocs/site
-      - ./site/accounts:/var/www/localhost/htdocs/site/accounts:rw
       # - ./assets:/var/www/localhost/htdocs/assets
-      - ./media:/var/www/localhost/htdocs/media:rw
     ports:
       - "3000:80"
     build:
