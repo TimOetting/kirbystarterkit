@@ -1,7 +1,6 @@
 version: "3"
 services:
   docker:
-    # image: paolomolo/getkirby-apache:v3
     volumes:
       - ./content:/var/www/html/content:rw
       - ./site/accounts:/var/www/html/site/accounts:rw
