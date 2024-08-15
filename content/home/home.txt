@@ -2,7 +2,7 @@ Title: Home
 
 ----
 
-Headline: Welcome to Kirby's Starterkit
+Headline: Welcome to Kirby's Starterkity
 
 ----
 
